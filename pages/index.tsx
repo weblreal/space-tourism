@@ -1,7 +1,25 @@
 import React from 'react';
 
-function index() {
-  return <div>index</div>;
+function HomePage() {
+  return (
+    <>
+      <Header>
+        <Logo />
+        <HorizontalLine />
+        <Nav>
+          <GradientBackground>
+            <NavItem>
+              <NavNumber />
+              <NavText />
+            </NavItem>
+            <NavItem></NavItem>
+            <NavItem></NavItem>
+            <NavItem></NavItem>
+          </GradientBackground>
+        </Nav>
+      </Header>
+    </>
+  );
 }
 
-export default index;
+export default HomePage;
