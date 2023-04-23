@@ -1,8 +1,21 @@
 import styled from 'styled-components';
-import { space, layout, flex } from 'styled-system';
+import {
+  space,
+  layout,
+  flexbox,
+  FlexboxProps,
+  SpaceProps,
+  LayoutProps,
+} from 'styled-system';
 
-interface IHeader {}
+interface IHeader extends FlexboxProps, SpaceProps, LayoutProps {
+  // width?: string | number;
+  // height?: string | number;
+  // mt?: string | number;
+}
 
-const Header = styled.header<IHeader>`
+export const Header = styled.header<IHeader>`
   ${space}
+  ${layout}
+  ${flexbox}
 `;

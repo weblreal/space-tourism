@@ -5,14 +5,20 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Bellefair';
     font-weight: normal;
     font-style: normal;
-    src: url('../public/assets/fonts/Bellefair-Regular.ttf') format('ttf')
+    src: url('/assets/fonts/Bellefair-Regular.ttf') format('truetype')
 }
 
 @font-face{
     font-family: 'BarlowCondensed';
     font-weight: normal;
     font-style: normal;
-    src: url('../public/assets/fonts/BarlowCondensed-Regular.ttf') format('ttf')
+    src: url('/assets/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+}
+
+:root {
+    --darkblue: #0B0D17;
+    --lightblue: #D0D6F9;
+    --white: #ffffff ; 
 }
 
 * {
@@ -35,11 +41,15 @@ h3 {
 }
 
 h4 {
-    font-size: 32px
+    font-size: 32px;
 }
 
 h5 {
-    font-size: 28px
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
 }
 `;
 
