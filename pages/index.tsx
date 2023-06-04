@@ -1,48 +1,29 @@
 import { Header } from '@/components/UI/Header/Header';
 import { HorizontalLine } from '@/components/UI/HorizontalLine/HorizontalLine';
 import { Nav } from '@/components/UI/Nav/Nav';
-import { NavItem } from '@/components/UI/NavItem/NavItem';
-import { NavText } from '@/components/UI/NavText/NavText';
 import path from 'path';
 import fs from 'fs';
 import React from 'react';
 import Logo from '../public/assets/shared/logo.svg';
-import Link from 'next/link';
 import { BackgroundImage } from '@/components/UI/BackgroundImage/BackgroundImage';
-
-interface INav {
-  count: string;
-  name: string;
-}
+import Navbar from '@/components/Navbar/Navbar';
+import MainText from '@/components/MainText/MainText';
+import { LinkButton } from '@/components/UI/LinkButton/LinkButton';
+import { Flex } from '@/components/UI/Flex/Flex';
+import Container from '@/components/Container/Container';
 
 // CREATE A COMPONENT
 function HomePage(props: any) {
   const { navigation, homepage } = props.data;
   const backgroundImage = homepage.images.landscape;
 
-  //! MAKE IT DRY
-  const renderedNav = navigation.map((item: INav) => (
-    <NavItem key={item.count}>
-      <NavText
-        href={item.name === 'Home' ? '/' : item.name}
-        color="var(--white)"
-        fontFamily="BarlowCondensed">
-        {item.count}
-      </NavText>
-      <NavText
-        href={item.name === 'Home' ? '/' : item.name}
-        fontFamily="BarlowCondensed"
-        color="var(--white)">
-        {item.name}
-      </NavText>
-    </NavItem>
-  ));
   return (
     <>
       <BackgroundImage
         backgroundImage={`url(${backgroundImage})`}
-        minHeight="56.25rem"
-        maxWidth="100vw">
+        minHeight="100vh"
+        maxWidth="100vw"
+        backgroundSize="cover">
         <Header
           width="100vw"
           height="6rem"
@@ -50,14 +31,44 @@ function HomePage(props: any) {
           display="flex"
           alignItems="center"
           justifyContent="space-between">
-          <Logo style={{ margin: '0 4rem 0 3.4375rem' }} />
-          <HorizontalLine
-            width="29.563rem"
-            height=" 0.063rem"
-            backgroundColor="var(--white)"
+          <Logo
+            style={{
+              margin: '0 4rem 0 3.4375rem',
+              'z-index': '3',
+            }}
           />
-          <Nav>{renderedNav}</Nav>
+          <HorizontalLine
+            width={['10%', '20%', '25%', '29%']}
+            height=" 0.063rem"
+            backgroundColor="var(--gray)"
+            zIndex="2"
+            position="absolute"
+            left="15rem"
+          />
+          <Nav>{<Navbar navigation={navigation} />}</Nav>
         </Header>
+        <Flex justifyContent="center">
+          <Flex
+            alignItems="flex-end"
+            justifyContent="space-between"
+            width="70rem">
+            <MainText homepage={homepage} />
+            <LinkButton
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              href="#"
+              variant="circle"
+              width="17.125rem"
+              height="17.125rem"
+              backgroundColor="var(--white)"
+              fontFamily="Bellefair"
+              fontSize="2rem"
+              color="var(--darkblue)">
+              {homepage.button.title}
+            </LinkButton>
+          </Flex>
+        </Flex>
       </BackgroundImage>
     </>
   );
