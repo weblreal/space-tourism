@@ -1,24 +1,14 @@
 import styled from 'styled-components';
-import {
-  color,
-  ColorProps,
-  layout,
-  LayoutProps,
-  position,
-  PositionProps,
-  space,
-  SpaceProps,
-} from 'styled-system';
+import { LayoutProps, layout } from 'styled-system';
 
-interface IHorizontalLine
-  extends SpaceProps,
-    ColorProps,
-    LayoutProps,
-    PositionProps {}
+interface IHorizontalLine extends LayoutProps {}
 
 export const HorizontalLine = styled.div<IHorizontalLine>`
-  ${position}
-  ${space}
   ${layout}
-  ${color}
+
+  height: 0.063rem;
+  background-color: var(--gray);
+  z-index: 2;
+  position: absolute;
+  left: 15rem;
 `;

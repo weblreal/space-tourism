@@ -8,8 +8,8 @@ import Logo from '../public/assets/shared/logo.svg';
 import { BackgroundImage } from '@/components/UI/BackgroundImage/BackgroundImage';
 import Navbar from '@/components/Navbar/Navbar';
 import MainText from '@/components/MainText/MainText';
-import { LinkButton } from '@/components/UI/LinkButton/LinkButton';
 import { Flex } from '@/components/UI/Flex/Flex';
+import LinkButton from '@/components/UI/LinkButton/LinkButton';
 import Container from '@/components/Container/Container';
 
 // CREATE A COMPONENT
@@ -37,37 +37,24 @@ function HomePage(props: any) {
               'z-index': '3',
             }}
           />
-          <HorizontalLine
-            width={['10%', '20%', '25%', '29%']}
-            height=" 0.063rem"
-            backgroundColor="var(--gray)"
-            zIndex="2"
-            position="absolute"
-            left="15rem"
-          />
+          <HorizontalLine width={['10%', '20%', '25%', '29%']} />
           <Nav>{<Navbar navigation={navigation} />}</Nav>
         </Header>
         <Flex justifyContent="center">
-          <Flex
+          <Container
             alignItems="flex-end"
             justifyContent="space-between"
             width="70rem">
             <MainText homepage={homepage} />
             <LinkButton
-              display="flex"
               justifyContent="center"
               alignItems="center"
               href="#"
-              variant="circle"
-              width="17.125rem"
-              height="17.125rem"
-              backgroundColor="var(--white)"
-              fontFamily="Bellefair"
-              fontSize="2rem"
+              variant="mainButton"
               color="var(--darkblue)">
               {homepage.button.title}
             </LinkButton>
-          </Flex>
+          </Container>
         </Flex>
       </BackgroundImage>
     </>

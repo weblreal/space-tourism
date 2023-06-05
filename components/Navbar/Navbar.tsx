@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkButton } from '../UI/LinkButton/LinkButton';
+import { NavButton } from '../UI/NavButton/NavButton';
 import { Text } from '../UI/Text/Text';
 
 interface INav {
@@ -10,10 +10,9 @@ interface INav {
 function Navbar({ navigation }: any) {
   //! MAKE IT DRY
   return navigation.map((item: INav) => (
-    <LinkButton
+    <NavButton
       key={item.count}
-      href={item.name === 'Home' ? '/' : item.name.toLowerCase()}
-      display="flex">
+      href={item.name === 'Home' ? '/' : item.name.toLowerCase()}>
       <Text
         color="var(--white)"
         fontFamily="BarlowCondensed"
@@ -30,7 +29,7 @@ function Navbar({ navigation }: any) {
         letterSpacing="0.25rem">
         {item.name.toUpperCase()}
       </Text>
-    </LinkButton>
+    </NavButton>
   ));
 }
 

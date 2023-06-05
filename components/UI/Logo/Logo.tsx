@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-interface ILogo {
-  width?: string;
-  height?: string;
-}
-export const Logo = styled.img<ILogo>``;
+import { LayoutProps, layout } from 'styled-system';
+
+interface ILogo extends LayoutProps {}
+
+export const Logo = styled.img<ILogo>`
+  ${layout}
+`;

@@ -1,15 +1,11 @@
-import styled, { css } from 'styled-components';
-import { IFlex } from '../UI/Flex/Flex';
-import { compose, layout, space } from 'styled-system';
+import styled from 'styled-components';
+import { Flex, IFlex } from '../UI/Flex/Flex';
+import { LayoutProps, layout } from 'styled-system';
 
-interface IContainer extends IFlex {}
+interface IContainer extends LayoutProps {}
 
-const Container = styled('div')<IContainer>(
-  compose(layout, space),
-  css`
-    ${layout}
-    ${space}
-  `
-);
+const Container = styled(Flex)<IContainer>`
+  ${layout}
+`;
 
 export default Container;
