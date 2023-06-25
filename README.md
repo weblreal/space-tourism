@@ -1,38 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Tip calculator app
+This is a solution for Space Tourism App challenge by Frontend Mentor [Frontend Mentor
+](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
+## Table of contents
+- [Overview](#overview)
+  - [About this project](#about-this-project)
+  - [The challenge](#the-challenge)
+- [Links](#links)
+- [My Process](#my-process)
+  - [Useful resources](#useful-resources)
+  - [Built with](#built-with)
+ - [Acknowledgments](#acknowledgments)
+ - [What I learn](#what-i-learn)
+ - [Author](#author)
 
-## Getting Started
 
-First, run the development server:
+## Overview
+### About this project
+NA
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### The challenge
+Users should be able to:
+NA
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Links
+- Solution URL: NA
+- Live Site URL: NA
+  
+## My Process
+### Useful resources
+ - NA
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Built with
+- ReactJS
+- NextJS
+- Styled-components
+- Styled-system
+- TypeScript
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Acknowledgments
+ - NA
+## What I learn
+- NA
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+- Frontend Mentor [@weblreal](https://www.frontendmentor.io/profile/weblreal)
