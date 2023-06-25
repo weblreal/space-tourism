@@ -1,57 +1,34 @@
 import Link from 'next/link';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { color, flexbox, layout, typography, variant } from 'styled-system';
+import ILinkButton from './ILinkButton';
 
-import {
-  BackgroundProps,
-  ColorProps,
-  FlexBasisProps,
-  FlexProps,
-  FlexboxProps,
-  LayoutProps,
-  TypographyProps,
-  background,
-  color,
-  flexbox,
-  layout,
-  typography,
-  variant,
-} from 'styled-system';
-import { IFlex } from '../Flex/Flex';
-
-type IButton = 'circle';
-
-interface ILinkButton extends ColorProps, TypographyProps, LayoutProps, IFlex {
-  variant?: IButton;
-}
-
-export const LinkButton = styled('a')<ILinkButton>`
-  background-color: transparent;
-  height: 100%;
-  //!bug when hovered
-  border-bottom: 0.1875rem solid transparent;
+const LinkButton = styled(Link)<ILinkButton>`
+  display: flex;
+  background-color: ${(props) => props.backgroundColor || 'var(--white)'};
 
   ${flexbox}
   ${color}
   ${typography}
   ${layout}
+
   ${variant({
     variants: {
-      circle: {
+      mainButton: {
+        width: '17.125rem',
+        height: '17.125rem',
+        fontSize: '2rem',
         borderRadius: '50%',
-        '&:hover': {
-          borderBottom: 'none !important',
-        },
-        '&:focus': {
-          borderBottom: 'none !important',
-        },
+        fontFamily: 'Bellefair',
+        // '&:hover': {
+        //   borderBottom: 'none !important',
+        // },
+        // '&:focus': {
+        //   borderBottom: 'none !important',
+        // },
       },
     },
   })}
-
-  &:focus {
-    border-bottom: 0.1875rem solid var(--white);
-  }
-  &:hover {
-    border-bottom: 0.1875rem solid var(--gray);
-  }
 `;
+
+export default LinkButton;
